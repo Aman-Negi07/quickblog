@@ -36,29 +36,41 @@ Built with **MERN stack (MongoDB, Express, React, Node.js)** and includes featur
 
 ## 📂 Project Structure
 
-```
-
-quickblog/
-│── client/               # React frontend
-│   ├── components/       # Reusable UI components
-│   ├── pages/            # Pages (Home, Blog, Admin, Dashboard, etc.)
-│   ├── context/          # AppContext for global state
-│   └── assets/           # Static assets (icons, images)
+```bash
+QUICKBLOG/
+│── quickblog/               # React frontend
+│   ├── context/             # Global state management
+│   ├── public/              # Public static files
+│   ├── src/                 # Main source code
+│   │   ├── assets/          # Images, icons, and static assets
+│   │   ├── components/      # Reusable UI components
+│   │   ├── pages/           # Pages (Home, Blog, Admin, Dashboard, etc.)
+│   │   └── App.js           # Main React app
+│   ├── index.html           # Entry point HTML
+│   ├── package.json         # Frontend dependencies & scripts
+│   ├── vite.config.js       # Vite configuration
+│   └── vercel.json          # Vercel deployment config
 │
-│── server/               # Node.js backend
-│   ├── controllers/      # Business logic (blogs, comments, admin)
-│   ├── models/           # Mongoose models
-│   ├── middleware/       # Auth & Multer
-│   ├── routes/           # API routes
-│   └── configs/          # ImageKit, DB config
+│── server/                  # Node.js backend
+│   ├── configs/             # Config files (DB, ImageKit, etc.)
+│   ├── controllers/         # Business logic (blogs, comments, admin)
+│   ├── middleware/          # Auth & other middleware
+│   ├── models/              # Mongoose models
+│   │   ├── Blog.js
+│   │   └── Comment.js
+│   ├── routes/              # API routes
+│   ├── server.js            # Entry point for backend
+│   ├── package.json         # Backend dependencies & scripts
+│   └── vercel.json          # Vercel deployment config
 │
-└── README.md
+├── README.md                # Project documentation
+├── .gitignore               # Git ignored files
+└── .env                     # Environment variables
 
 ````
 
----
 
-## ⚙️ Installation & Setup
+### ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
 ```bash
@@ -88,7 +100,7 @@ IMAGEKIT_URL_ENDPOINT=your_imagekit_url_endpoint
 Run backend:
 
 ```bash
-npm run dev
+npm run start
 ```
 
 ### 3️⃣ Frontend Setup
@@ -121,29 +133,14 @@ npm run dev
 ## 📸 Screenshots
 
 ### 🏠 Homepage
+![Homepage Screenshot](./quickblog/src/assets/Home.png)
 
-(*Add screenshot here*)
+
+### 📊 Admin Login
+![Homepage Screenshot](./quickblog/src/assets/Admin_Login.png)
 
 ### 📊 Admin Dashboard
+![Homepage Screenshot](./quickblog/src/assets/dashboard.png)
 
-(*Add screenshot here*)
-
----
-
-## 🤝 Contributing
-
-Pull requests are welcome!
-For major changes, please open an issue first to discuss what you’d like to change.
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
-```
-
----
-
-Do you also want me to include a **sample API Endpoints section** (with `GET /api/blog/all`, `POST /api/blog/add-comment`, etc.) in this same code block so devs can test your backend quickly with Postman?
-```
+### 🌐 Live Demo
+👉 [QuickBlog](https://quick-blog-two-fawn.vercel.app/)
